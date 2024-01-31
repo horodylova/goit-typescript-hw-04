@@ -40,10 +40,8 @@ export function RequestComponent() {
 
   const startRequest = () => {
     requestDispatch({ type: "START_REQUEST" });
-    // Імітуємо запит до сервера
     setTimeout(() => {
       requestDispatch({ type: "PENDING_REQUEST" });
-      // Імітуємо отримання відповіді від сервера
       setTimeout(() => {
         requestDispatch({ type: "FINISH_REQUEST" });
       }, 2000);
